@@ -6,12 +6,12 @@ import {
 } from "../components";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { CategoriesData } from "../../CategoriesData";
+import { categories } from "../../categories";
 import useFilteredData from "../hooks/useFilteredData";
 const CategoryPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { category } = useParams();
-  const categoryData = CategoriesData.find((item) => item.id === category);
+  const categoryData = categories.find((item) => item.id === category);
   const categoryProducts = categoryData ? categoryData.products : [];
   const filteredProducts = useFilteredData(
     categoryProducts,

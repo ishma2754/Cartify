@@ -1,10 +1,10 @@
-import { CategoriesData } from "../../CategoriesData";
+import { categories } from "../../categories";
 import { Loading, ProductsGrid } from "./index";
 import { useState, useEffect } from "react";
 
 const CategoryContainer = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const categories = CategoriesData.filter((item) => item.type === "category");
+  const categoriesProducts = categories.filter((item) => item.type === "category");
 
   useEffect(() => {
     setIsLoading(true);
@@ -19,7 +19,7 @@ const CategoryContainer = () => {
         <Loading />
       ) : (
         <ProductsGrid
-          products={categories}
+          products={categoriesProducts}
           text="Shop By Category"
           isCategory={true}
         />

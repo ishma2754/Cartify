@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { NavLinks } from "./index";
 import ToggleTheme from "./ToggleTheme";
-import { FaShoppingCart, FaMoon, FaSun } from "react-icons/fa";
+import { FaShoppingCart} from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdCancel } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector} from "react-redux";
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);

@@ -1,6 +1,6 @@
 import { formatPrice, generateAmountOptions } from "../utils/index.jsx";
 import { Link, useParams } from "react-router-dom";
-import { AllData } from "../../AllData.jsx";
+import { data } from "../../data.js";
 import { StarRating } from "../components/index.js";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -9,7 +9,7 @@ import { addItem } from "../features/cart/cartSlice.js";
 const SingleProduct = () => {
   const [amount, setAmount] = useState(1);
   const { id } = useParams();
-  const products = AllData.products;
+  const products = data.products;
 
   const product = products.find((item) => item.id == id);
 

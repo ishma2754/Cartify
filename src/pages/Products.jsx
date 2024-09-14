@@ -6,12 +6,12 @@ import {
   Loading,
 } from "../components/index.js";
 
-import { AllData } from "../../AllData.jsx";
+import { data} from "../../data.js";
 import useFilteredData from "../hooks/useFilteredData.js";
 import usePagination from "../hooks/usePagination.js";
 
 const Products = () => {
-  const products = AllData.products;
+  const products = data.products;
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {

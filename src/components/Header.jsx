@@ -1,31 +1,4 @@
-// import { Link } from "react-router-dom";
 
-// const Header = () => {
-//   return (
-//     <header className="mx-auto max-w-6xl px-8 py-2 ">
-//       <ul className="flex flex-row gap-5 justify-center lg:justify-end">
-//         <li>
-//           <Link
-//             to="/login"
-//             className="text-gray-900 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-//           >
-//             Sign in/ Guest
-//           </Link>
-//         </li>
-//         <li>
-//           <Link
-//             to="/register"
-//             className="text-gray-900 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-//           >
-//             Create Account
-//           </Link>
-//         </li>
-//       </ul>
-//     </header>
-//   );
-// };
-
-// export default Header;
 
 import { Link } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 
-export const CategoriesData = [
+export const categories = [
   {
     id: "fragrances",
     type: "category",

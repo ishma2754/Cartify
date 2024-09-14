@@ -17,7 +17,9 @@ const NavLinks = ({ className }) => {
           <NavLink
             to={path}
             className={({ isActive }) =>
-              isActive ? "text-blue-400 font-bold" : ""
+              `block px-4 py-2 rounded-md transition-colors 
+              ${isActive ? "bg-pink-500 text-white font-bold" : "text-gray-700 dark:text-gray-100"}
+              hover:bg-gray-700 hover:text-white dark:hover:bg-gray-700`
             }
           >
             {title}

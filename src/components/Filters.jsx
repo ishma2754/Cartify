@@ -1,4 +1,4 @@
-import { Form } from "react-router-dom";
+
 import { useState } from "react";
 import { FormInput, FormSelect, Ratings, FormRange } from "../components/index";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,7 +9,7 @@ import {
   filterBySearch,
   filterbyPriceRange,
   clearFilters,
-} from "../store/filtersSlice";
+} from "../features/filters/filtersSlice";
 
 const Filters = () => {
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ const Filters = () => {
       case "sort":
         dispatch(sortByPrice(value));
         break;
-    
+
       default:
         break;
     }
@@ -66,7 +66,7 @@ const Filters = () => {
   };
 
   return (
-    <Form className="bg-gray-100 rounded-md px-8 py-4 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
+    <div className="bg-blue-100 dark:bg-gray-700 rounded-md px-8 py-4 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center">
       {/**SEARCH */}
       <FormInput
         type="search"
@@ -114,87 +114,24 @@ const Filters = () => {
       />
 
       {/**Ratings */}
-      <div className="col-span-full">
-        <label className="text-sm font-medium text-gray-700">
-          Select Rating
-        </label>
-        <div className="flex items-center space-x-2">
-          <Ratings rating={formValues.rating} onClick={handleRatingChange} />
-        </div>
-      </div>
+
+      <Ratings
+        rating={formValues.rating}
+        onClick={handleRatingChange}
+        label="Select Rating"
+      />
 
       {/**BUTTONS */}
 
       <button
         type="button"
-        className="bg-gray-500 text-white py-2 px-4 rounded-md text-sm font-medium hover:bg-gray-600"
+        className="bg-pink-400 text-white py-2 px-4 rounded-md text-sm font-medium hover:bg-pink-300 dark:bg-pink-400 dark:text-black capitalize dark:hover:bg-pink-300"
         onClick={handleReset}
       >
-        reset
+        RESET
       </button>
-    </Form>
+    </div>
   );
 };
 
 export default Filters;
-
-/*
-<FormCheckbox
-        name="shipping"
-        label="free shipping"
-        size="checkbox-sm"
-        defaultValue=""
-      />
-*/
-/**
- *   // const selectedRating = useSelector((state) => state.filters.byRating);
-  // const selectedPrice = useSelector((state) => state.filters.price);
-  // const selectedBrand = useSelector((state) => state.filters.byBrand);
-  // const selectedSort = useSelector((state) => state.filters.sort);
-  // const selectedSearch = useSelector((state) => state.filters.searchQuery);
-  // const [price, setPrice] = useState(selectedPrice);
-  // const [rating, setRating] = useState(selectedRating);
-
-  // const [brand, setBrand] = useState(selectedBrand);
-  // const [sort, setSort] = useState(selectedSort);
-  // const [search, setSearch] = useState(selectedSearch);
-
-  // const handleSearchChange = (e) => {
-  //   const selectedSearch = e.target.value;
-  //   setSearch(selectedSearch);
-  //   dispatch(filterBySearch(selectedSearch));
-  // };
-
-  // const handleBrandChange = (e) => {
-  //   const selectedBrand = e.target.value;
-  //   setBrand(selectedBrand);
-  //   dispatch(filterByBrand(selectedBrand));
-  // };
-
-  // const handleSortChange = (e) => {
-  //   const selectedSort = e.target.value;
-  //   setSort(selectedSort);
-  //   dispatch(sortByPrice(selectedSort));
-  // };
-
-  // const handleRatingChange = (rating) => {
-  //   const roundedRating = Math.round(rating);
-  //   setRating(roundedRating);
-  //   dispatch(filterByRating(roundedRating));
-  // };
-
-  // const handlePriceRangeChange = (e) => {
-  //   const price = e.target.value;
-  //   setPrice(price);
-  //   dispatch(filterbyPriceRange(price));
-  // };
-
-  // const handleReset = () => {
-  //   dispatch(clearFilters());
-  //   setRating(0);
-  //   setPrice(3000);
-  //   setBrand("");
-  //   setSort("");
-  //   setSearch("")
-  // };
- */

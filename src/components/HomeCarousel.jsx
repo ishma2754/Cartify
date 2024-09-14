@@ -19,68 +19,25 @@ const HomeCarousel = () => {
   };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center">
+    <div className="relative  w-full h-80 md:h-96 flex items-center justify-center overflow-hidden bg-transparent">
       {/* Image */}
+      <div className="absolute inset-0 dark:bg-gray-100 rounded-2xl">
       <img
         src={currentSlide.url}
-        alt={`Slide`}
-        className="w-full h-full object-contain rounded-2xl"
+        className="w-full h-full object-contain rounded-2xl" 
         loading="lazy"
       />
+    </div>
       {/* Left Arrow */}
-      <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+      <div className="absolute top-[50%] -translate-y-1/2 left-5 text-2xl rounded-full p-2 bg-black/40 text-white dark:bg-gray-600 dark:text-gray-800 hover:bg-black/60 dark:hover:bg-gray-800 transition-colors cursor-pointer">
         <BsChevronCompactLeft size={30} onClick={prevSlide} />
       </div>
       {/* Right Arrow */}
-      <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+      <div className="absolute top-[50%] -translate-y-1/2 right-5 text-2xl rounded-full p-2 bg-black/40 text-white dark:bg-gray-600 dark:text-gray-800 hover:bg-black/60 dark:hover:bg-gray-800 transition-colors cursor-pointer">
         <BsChevronCompactRight size={30} onClick={nextSlide} />
       </div>
-      <div className="absolute bottom-4 flex justify-center w-full"></div>
     </div>
   );
 };
 
 export default HomeCarousel;
-
-/*let slides = [
-  {
-    url: "https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692947383286-714WUJlhbLS._SL1500_.jpg",
-  },
-  {
-    url: "https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692255251854-xbox.jpg",
-  },
-  {
-    url: "https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692257709689-logitech-heaphone.jpg",
-  },
-  {
-    url: "https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692941008275-headphone3.jpg",
-  },
-  {
-    url: "https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1691056487173-headphon2.jpg",
-  },
-];
-
-const HomeCarousel = () => {
-  return (
-    <div className="">
-    
-    </div>
-  );
-};
-
-export default HomeCarousel;
-*/
-
-/*
- <div className="w-[60%] m-auto pt-11">
-      <Carousel slides={slides} />
-    </div>
-*/
-/*
-<div className="relative max-w-screen-lg mx-auto px-4 py-8">
-      <div
-        style={{ backgroundImage: `url(${slides[0].url})` }}
-        className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
-      ></div>
-    </div>
-*/

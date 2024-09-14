@@ -16,7 +16,7 @@ const PaginationContainer = ({ totalPages, paginate, currentPage }) => {
               onClick={() => paginate(number)}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                 currentPage === number
-                  ? "bg-blue-500 text-white"
+                  ? "bg-blue-500 dark:bg-pink-400 text-white"
                   : "bg-gray-200 text-gray-700 hover:bg-blue-100"
               } ${currentPage === number ? "font-bold" : ""}`}
             >

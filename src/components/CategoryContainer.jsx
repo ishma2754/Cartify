@@ -1,10 +1,10 @@
-import { categoriesData } from "../../categoriesData";
+import { CategoriesData } from "../../CategoriesData";
 import { Loading, ProductsGrid } from "./index";
 import { useState, useEffect } from "react";
 
-const PopularProducts = () => {
+const CategoryContainer = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const categories = categoriesData.filter((item) => item.type === "category");
+  const categories = CategoriesData.filter((item) => item.type === "category");
 
   useEffect(() => {
     setIsLoading(true);
@@ -28,4 +28,4 @@ const PopularProducts = () => {
   );
 };
 
-export default PopularProducts;
+export default CategoryContainer;

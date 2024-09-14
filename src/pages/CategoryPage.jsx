@@ -1,17 +1,44 @@
-import { Filters, ProductsContainer, PaginationContainer } from "../components";
+import {
+  Filters,
+  ProductsContainer,
+  PaginationContainer,
+  Loading,
+} from "../components";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { categoriesData } from "../../categoriesData";
+import { CategoriesData } from "../../CategoriesData";
 import useFilteredData from "../hooks/useFilteredData";
 const CategoryPage = () => {
-  const {category} = useParams()
-  const categoryData = categoriesData.find(item => item.id === category)
+  const [isLoading, setIsLoading] = useState(false);
+  const { category } = useParams();
+  const categoryData = CategoriesData.find((item) => item.id === category);
   const categoryProducts = categoryData ? categoryData.products : [];
-  const filteredProducts = useFilteredData(categoryProducts, (state) => state.filters);
+  const filteredProducts = useFilteredData(
+    categoryProducts,
+    (state) => state.filters
+  );
+
+  useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
-      <Filters/>
-      <ProductsContainer text={categoryData ? categoryData.title : "Category"} products={filteredProducts} isCategory={false}/>
-      <PaginationContainer />
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <Filters />
+          <ProductsContainer
+            text={categoryData ? categoryData.title : "Category"}
+            products={filteredProducts}
+            isCategory={false}
+          />
+          <PaginationContainer />
+        </>
+      )}
     </>
   );
 };

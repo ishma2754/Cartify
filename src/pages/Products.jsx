@@ -6,7 +6,7 @@ import {
   Loading,
 } from "../components/index.js";
 
-import { data} from "../../data.js";
+import {data} from "../../data.js";
 import useFilteredData from "../hooks/useFilteredData.js";
 import usePagination from "../hooks/usePagination.js";
 

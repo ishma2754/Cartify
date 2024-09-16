@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="dark:bg-gray-900 py-2 text-black dark:text-gray-200 bg-gray-800 text-gray-100">
+    <header className="dark:bg-gray-900 py-2 text-black dark:text-gray-200 bg-gray-800">
       <div className="container mx-auto flex justify-center sm:justify-end items-center pr-4">
         {/* USER */}
         {/* LINKS */}

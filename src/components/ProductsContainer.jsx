@@ -4,7 +4,6 @@ import { BsFillGridFill, BsList } from "react-icons/bs";
 import { MdCancel } from "react-icons/md";
 
 const ProductsContainer = ({products}) => {
-  //const {products } = useLoaderData()
   const [layout, setLayout] = useState("grid");
   const setActiveStyles = (pattern) => {
     return `text-xl rounded-lg p-2  ${

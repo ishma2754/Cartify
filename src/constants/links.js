@@ -1,3 +1,12 @@
+export const navlinks = [
+  { id: 1, path: "/", title: "Home" },
+  { id: 2, path: "about", title: "About" },
+  { id: 3, path: "products", title: "Products" },
+  { id: 4, path: "cart", title: "Cart" },
+  { id: 5, path: "checkout", title: "Checkout" },
+  { id: 6, path: "orders", title: "Orders" },
+];
+
 export const slides = [
   {
     url: "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"

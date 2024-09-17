@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { slides } from "../utils/slides";
+import { slides } from "../constants/links.js";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
 const HomeCarousel = () => {

@@ -19,7 +19,7 @@ const ProductsGrid = ({ text, products, isCategory }) => {
             <Link
               key={id}
               to={linkTo}
-              className="w-full bg-gray-100  shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-lg overflow-hidden dark:shadow-sm dark:rounded-lg dark:shadow-gray-100 "
+              className="w-full bg-gray-100  shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-lg overflow-hidden dark:shadow-sm dark:rounded-lg dark:shadow-gray-100 dark:hover:bg-gray-200"
             >
               <figure className="px-4 pt-4 ">
                 <img
@@ -28,7 +28,7 @@ const ProductsGrid = ({ text, products, isCategory }) => {
                   className="rounded-xl h-64 md:h-48 w-full object-contain"
                 />
               </figure>
-              <div className="p-4 text-center dark:bg-gray-900">
+              <div className="p-4 text-center dark:bg-gray-900 dark:hover:bg-gray-800 ">
                 <h2 className="text-lg font-semibold capitalize tracking-wide  text-gray-900 dark:text-gray-100">
                   {title}
                 </h2>

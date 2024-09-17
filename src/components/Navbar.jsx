@@ -40,7 +40,7 @@ const Navbar = () => {
 
           {dropdown && (
             <div className="absolute top-14 left-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-200 rounded-md shadow-lg w-48 z-10 ">
-              <NavLinks className="flex flex-col p-7" />
+              <NavLinks className="flex flex-col lg:hidden  p-7" />
             </div>
           )}
         </div>

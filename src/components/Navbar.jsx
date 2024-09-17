@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { NavLinks } from "./index";
 import ToggleTheme from "./ToggleTheme";
-import { FaShoppingCart} from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdCancel } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
-import { useSelector} from "react-redux";
+import { useSelector } from "react-redux";
+
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
@@ -25,22 +26,23 @@ const Navbar = () => {
               C
             </button>
           </Link>
-
+          <div className="lg:hidden flex items-center">
           {dropdown ? (
             <MdCancel
-              className="lg:hidden h-6 w-6 cursor-pointer text-gray-700 dark:text-gray-100"
+              className=" h-6 w-6 cursor-pointer text-gray-700 dark:text-gray-100"
               onClick={toggleDropdown}
             />
           ) : (
             <RxHamburgerMenu
-              className="lg:hidden h-6 w-6 cursor-pointer text-gray-700 dark:text-white"
+              className=" h-6 w-6 cursor-pointer text-gray-700 dark:text-white"
               onClick={toggleDropdown}
             />
           )}
+          </div>
 
           {dropdown && (
-            <div className="absolute top-14 left-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-200 rounded-md shadow-lg w-48 z-10 ">
-              <NavLinks className="flex flex-col lg:hidden  p-7" />
+            <div className="absolute top-14 left-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-200 rounded-md shadow-lg w-48 z-10 lg:hidden ">
+              <NavLinks className="flex-col p-7" />
             </div>
           )}
         </div>

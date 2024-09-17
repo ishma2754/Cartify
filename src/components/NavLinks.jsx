@@ -3,7 +3,7 @@ import { navlinks } from "../constants/links";
 
 const NavLinks = ({ className }) => {
   return (
-    <ul className={`flex flex-col lg:flex-row gap-6 ${className}`}>
+    <ul className={`flex gap-6 ${className}`}>
       {navlinks.map(({ id, path, title }) => (
         <li key={id}>
           <NavLink

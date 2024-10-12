@@ -1,6 +1,6 @@
 import { formatPrice, generateAmountOptions } from "../utils/index.jsx";
 import { Link, useParams } from "react-router-dom";
-import { data } from "../../data.js";
+import { data } from "../data/data.js";
 import { StarRating } from "../components/index.js";
 import { useState } from "react";
 import { useDispatch } from "react-redux";

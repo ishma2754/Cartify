@@ -1,5 +1,3 @@
-
-
 import { HomeCarousel, CategoryContainer } from "../components/index";
 
 const LandingPage = () => {

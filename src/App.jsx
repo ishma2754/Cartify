@@ -1,7 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import {
-  Checkout,
   ErrorPage,
   HomeLayout,
   LandingPage,
@@ -9,9 +7,6 @@ import {
   About,
   Cart,
   Products,
-  Orders,
-  Login,
-  Register,
   CategoryPage,
 } from "./pages/index";
 
@@ -39,11 +34,6 @@ const router = createBrowserRouter([
         errorElement: <ErrorElement />,
       },
       {
-        path: "checkout",
-        element: <Checkout />,
-        errorElement: <ErrorElement />,
-      },
-      {
         path: "products",
         element: <Products />,
         errorElement: <ErrorElement />,
@@ -58,39 +48,9 @@ const router = createBrowserRouter([
         element: <CategoryPage />,
         errorElement: <ErrorElement />,
       },
-      {
-        path: "orders",
-        element: <Orders />,
-        errorElement: <ErrorElement />,
-      },
     ],
   },
-  {
-    path: "/login",
-    element: <Login />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/register",
-    element: <Register />,
-    errorElement: <ErrorPage />,
-  },
 ]);
-
-/*
-import {createRouterFromElements, Route}
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-    <Route path="/" element={<HomeLayout/>} errorElement={<ErrorPage/>}>
-        <Route></Route>
-    </Route>
-    <Route path="/login"></Route>
-    <Route path="/register"></Route>
-    </>
-  )
-)
-*/
 
 const App = () => {
   return <RouterProvider router={router} />;

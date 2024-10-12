@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   sort: "",
   byBrand: "",
+  byCategory: "",
   byRating: 0,
   searchQuery: "",
   price: 3000
@@ -18,6 +19,9 @@ const filtersSlice = createSlice({
     filterByBrand: (state, action) => {
       state.byBrand = action.payload;
     },
+    filterByCategory: (state, action) => {
+      state.byCategory = action.payload;
+    },
     filterByRating: (state, action) => {
       state.byRating = action.payload;
     },
@@ -31,6 +35,7 @@ const filtersSlice = createSlice({
       state.byRating = 0;
       state.searchQuery = "";
       state.byBrand = "";
+      state.byCategory = "";
       state.sort = "";
       state.price = 3000;
     },
@@ -40,6 +45,7 @@ const filtersSlice = createSlice({
 export const {
   sortByPrice,
   filterByBrand,
+  filterByCategory,
   filterByRating,
   filterBySearch,
   filterbyPriceRange,

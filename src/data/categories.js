@@ -248,6 +248,146 @@ export const categories = [
     limit: 5,
   },
   {
+    id: "groceries",
+    type: "category",
+    title: "Groceries",
+    image: "https://cdn.dummyjson.com/products/images/groceries/Apple/1.png",
+    products: [
+      {
+        id: 16,
+        title: "Apple",
+        description:
+          "Fresh and crisp apples, perfect for snacking or incorporating into various recipes.",
+        category: "groceries",
+        price: 1.99,
+        discountPercentage: 1.97,
+        rating: 2.96,
+        stock: 9,
+        image:
+          "https://cdn.dummyjson.com/products/images/groceries/Apple/1.png",
+      },
+      {
+        id: 18,
+        title: "Cat Food",
+        description:
+          "Nutritious cat food formulated to meet the dietary needs of your feline friend.",
+        category: "groceries",
+        price: 8.99,
+        discountPercentage: 9.57,
+        rating: 2.88,
+        stock: 13,
+        image:
+          "https://cdn.dummyjson.com/products/images/groceries/Cat%20Food/1.png",
+      },
+      {
+        id: 20,
+        title: "Cooking Oil",
+        description:
+          "Versatile cooking oil suitable for frying, sautéing, and various culinary applications.",
+        category: "groceries",
+        price: 4.99,
+        discountPercentage: 18.89,
+        rating: 4.01,
+        stock: 22,
+        image:
+          "https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/1.png",
+      },
+      {
+        id: 21,
+        title: "Cucumber",
+        description:
+          "Crisp and hydrating cucumbers, ideal for salads, snacks, or as a refreshing side.",
+        category: "groceries",
+        price: 1.49,
+        discountPercentage: 11.44,
+        rating: 4.71,
+        stock: 22,
+        image:
+          "https://cdn.dummyjson.com/products/images/groceries/Cucumber/1.png",
+      },
+      {
+        id: 25,
+        title: "Green Bell Pepper",
+        description:
+          "Fresh and vibrant green bell pepper, perfect for adding color and flavor to your dishes.",
+        category: "groceries",
+        price: 1.29,
+        discountPercentage: 15.5,
+        rating: 4.28,
+        stock: 89,
+        image:
+          "https://cdn.dummyjson.com/products/images/groceries/Green%20Bell%20Pepper/1.png",
+      },
+      {
+        id: 26,
+        title: "Green Chili Pepper",
+        description:
+          "Spicy green chili pepper, ideal for adding heat to your favorite recipes.",
+        category: "groceries",
+        price: 0.99,
+        discountPercentage: 18.51,
+        rating: 4.43,
+        stock: 8,
+        image:
+          "https://cdn.dummyjson.com/products/images/groceries/Green%20Chili%20Pepper/1.png",
+      },
+      {
+        id: 27,
+        title: "Honey Jar",
+        description:
+          "Pure and natural honey in a convenient jar, perfect for sweetening beverages or drizzling over food.",
+        category: "groceries",
+        price: 6.99,
+        discountPercentage: 1.91,
+        rating: 3.5,
+        stock: 25,
+        image:
+          "https://cdn.dummyjson.com/products/images/groceries/Honey%20Jar/1.png",
+      },
+      {
+        id: 28,
+        title: "Ice Cream",
+        description:
+          "Creamy and delicious ice cream, available in various flavors for a delightful treat.",
+        category: "groceries",
+        price: 5.49,
+        discountPercentage: 7.58,
+        rating: 3.77,
+        stock: 76,
+        image:
+          "https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/1.png",
+      },
+      {
+        id: 29,
+        title: "Juice",
+        description:
+          "Refreshing fruit juice, packed with vitamins and great for staying hydrated.",
+        category: "groceries",
+        price: 3.99,
+        discountPercentage: 5.45,
+        rating: 3.41,
+        stock: 99,
+        image:
+          "https://cdn.dummyjson.com/products/images/groceries/Juice/1.png",
+      },
+      {
+        id: 30,
+        title: "Kiwi",
+        description:
+          "Nutrient-rich kiwi, perfect for snacking or adding a tropical twist to your dishes.",
+        category: "groceries",
+        price: 2.49,
+        discountPercentage: 10.32,
+        rating: 4.37,
+        stock: 1,
+        image: "https://cdn.dummyjson.com/products/images/groceries/Kiwi/1.png",
+      },
+    ],
+    total: 10,
+    skip: 0,
+    limit: 10,
+  },
+  {
     id: "laptops",
     type: "category",
     title: "laptops",

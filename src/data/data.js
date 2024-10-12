@@ -340,7 +340,6 @@ export const data = {
       stock: 1,
       image: "https://cdn.dummyjson.com/products/images/groceries/Kiwi/1.png",
     },
-
     {
       id: 78,
       title: "Apple MacBook Pro 14 Inch Space Grey",
@@ -416,5 +415,3 @@ export const data = {
   skip: 0,
   limit: 30,
 };
-
-
